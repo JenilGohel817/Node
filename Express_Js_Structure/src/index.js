@@ -38,6 +38,12 @@ app.get("/", (req, res) => {
   res.send("Jenil Gohel");
 });
 
+app.get("*", (req, res) => {
+  res.render("404", {
+    ErrorData: "404 Error",
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server Start port is ${port}`);
 });
