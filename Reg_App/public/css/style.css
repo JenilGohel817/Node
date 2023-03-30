@@ -41,6 +41,12 @@ body {
   bottom: -80px;
 }
 
+.menu_white {
+  text-align: center;
+  margin-top: 300px;
+  color: #fff;
+}
+
 form {
   height: 550px;
   width: 400px;

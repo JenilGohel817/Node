@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://localhost:27017/RegUser", {
+  .connect("mongodb://localhost:27017", {
     // For Not Given Deprication Error
+    dbName: "EmpReg",
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
   })
   .then(() => {
     console.log("db connected !");

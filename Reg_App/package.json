@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon src/app.js -e js,hbs"
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "author": "RegApp",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "hbs": "^4.2.0",
+    "mongodb": "^5.1.0",
     "mongoose": "^7.0.3",
     "nodemon": "^2.0.22"
   }

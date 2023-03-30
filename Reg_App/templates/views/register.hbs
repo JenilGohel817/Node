@@ -9,19 +9,22 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form action="/register" method="POST">
         <h3>Register Here</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Username" id="username">
+        <label for="name">name</label>
+        <input type="text" name="name" placeholder="Username" id="name">
 
-        <label for="username">Email</label>
-        <input type="email" placeholder="Email" id="email">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email" id="email">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" name="password" placeholder="Password" id="password">
 
-        <button>Log In</button>
+         <label for="confirmpassword">Confirm Password</label>
+        <input type="password" name="confirmpassword" placeholder="Confirm Password" id="confirmpassword">
+
+        <button type="submit">Register</button>
     </form>
     {{>footer}}
   </body>
