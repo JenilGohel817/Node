@@ -57,7 +57,18 @@ app.post("/register", async (req, res) => {
         confirmpassword: cPassword,
       });
 
-      const registerd = await registerEmp.save();
+      const registerd = await registerEmp.save((err) => {
+        if (err) {
+          res.json({ message: err.message, type: "danger" });
+        } else {
+          req.session.message = {
+            type: "success",
+            message: "User Added !",
+          };
+          res.render("index");
+        }
+      });
+      console.log("-----------------------------", registerd);
       res.send(201).render("index");
     } else {
       res.send("Password Is Not Matching");

@@ -43,7 +43,7 @@ body {
 
 .menu_white {
   text-align: center;
-  margin-top: 300px;
+  margin-top: 200px;
   color: #fff;
 }
 
@@ -124,7 +124,15 @@ nav {
   flex-wrap: wrap;
   top: 3em;
 }
-
+.padd {
+  padding: 15px 25px;
+  background: #fff;
+  display: block;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
 nav .menu-item {
   color: white;
   font-weight: 600;
@@ -153,3 +161,22 @@ nav .menu-text a:hover {
   color: rgba(255,255,255,0.5);
 }
 
+
+table {
+  width: 450px;
+  height: 175px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+th, td {
+  width: 33px;
+}
+
+td.padd-flex {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
