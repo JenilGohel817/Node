@@ -46,6 +46,9 @@ var userSchema = new mongoose.Schema(
       type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
       default: [],
     },
+    refreshToken: {
+      type: String,
+    },
   },
   {
     timeseries: true,
