@@ -14,11 +14,11 @@ router.get("/post-photo/:pid", productPhotoController);
 
 router.post("/postCreate", ExpressFormidable(), postCreate);
 
-router.put("/postUpdate/:id", ExpressFormidable(), postUpdate);
+router.put("/postFetchSingle/:id", ExpressFormidable(), postUpdate);
 
 router.get("/postFetch", postFetch);
 
-router.get("/postFetchSingle/:id", postFetchSingle);
+router.get("/postUpdate/:id", postFetchSingle);
 
 router.delete("/postDelete/:id", postDelete);
 

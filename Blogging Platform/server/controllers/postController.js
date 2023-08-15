@@ -62,6 +62,8 @@ const postUpdate = async (req, res) => {
       }
     );
 
+    console.log(update);
+
     return res.status(200).send({
       success: true,
       message: "Post Updated !",

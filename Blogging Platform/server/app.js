@@ -10,6 +10,7 @@ import userRouter from "./router/userRouter.js";
 import postRouter from "./router/postRouter.js";
 import likeRouter from "./router/likeRouter.js";
 import commentRouter from "./router/commentRouter.js";
+import fileUpload from "express-fileupload";
 const app = express();
 const PORT = 8080 || process.env.PORT;
 
@@ -20,7 +21,8 @@ app.use(express.json());
 app.use(express.static("upload"));
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(fileUpload());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/post", postRouter);
