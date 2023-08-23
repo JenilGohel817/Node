@@ -61,6 +61,7 @@ const reduxUpdate = async (req, res) => {
 
   if (req.file !== undefined && req.file.filename !== undefined) {
     updateData.photo = req.file.filename;
+    console.log(updateData);
     console.log(updateData.photo);
   }
 

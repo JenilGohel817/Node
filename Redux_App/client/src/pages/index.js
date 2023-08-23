@@ -62,7 +62,7 @@ const Index = () => {
       "http://localhost:8080/redux/reduxCreate",
       formData
     );
-    
+
     dispatch(addRedux(post));
     navigate("/details");
   };

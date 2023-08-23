@@ -76,11 +76,12 @@ const Details = () => {
             <th style={borderStyle}>Email</th>
             <th style={borderStyle}>Edit</th>
             <th style={borderStyle}>Delete</th>
+            <th style={borderStyle}>Link</th>
           </tr>
         </thead>
         <tbody>
           {users?.map((e) => (
-            <tr key={e}>
+            <tr style={{ border: "5px solid #fff" }} key={e}>
               <th style={thStyle}>
                 <img
                   style={imageStyle}
@@ -104,6 +105,11 @@ const Details = () => {
                   }}
                 >
                   Delete
+                </Link>
+              </th>
+              <th style={thStyle}>
+                <Link style={btnStyle} to={`/detailsFull/${e.id}`}>
+                  Link
                 </Link>
               </th>
             </tr>

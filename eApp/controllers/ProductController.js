@@ -234,6 +234,7 @@ const productFilterController = async (req, res) => {
       product,
     });
   } catch (error) {
+    d;
     console.log(error);
     res.status(400).send({
       success: false,
