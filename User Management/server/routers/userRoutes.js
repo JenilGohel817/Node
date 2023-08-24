@@ -12,7 +12,7 @@ import upload from "../middlewares/upload.js";
 
 router.post("/userCreate", upload.single("photo"), userCreate);
 
-router.post("/userUpdate/:id", upload.single("photo"), userUpdate);
+router.put("/userUpdate/:id", upload.single("photo"), userUpdate);
 
 router.delete("/userDelete/:id", userDelete);
 

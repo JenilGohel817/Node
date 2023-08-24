@@ -6,6 +6,18 @@ import axios from "axios";
 const UserPage = () => {
   const [products, Setproducts] = useState([]);
 
+  const handleDelete = async (id) => {
+    try {
+      const { data } = await axios.delete(
+        `http://localhost:8080/userApi/v1/userDelete/${id}`
+      );
+      console.log(data);
+      getProduct();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const getProduct = async (e) => {
     try {
       const { data } = await axios.get(
@@ -52,7 +64,13 @@ const UserPage = () => {
                 <Link to={p._id}>Edit</Link>
               </td>
               <td>
-                <Link to={p._id}>Delete</Link>
+                <button
+                  onClick={() => {
+                    handleDelete(p._id);
+                  }}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

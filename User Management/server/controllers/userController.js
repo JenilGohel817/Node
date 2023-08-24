@@ -69,21 +69,15 @@ const userUpdate = async (req, res) => {
     const paramId = req.params.id;
 
     const { name, email, gender, number } = req.body;
-    const photo = req.file.filename;
 
-    if (!name || !email || !gender || !number || !photo) {
+    if (!name || !email || !gender || !number) {
       return res.status(404).send({
         message: "All fields are required!",
         success: false,
       });
     }
 
-    if (!photo && photo.size > 1000000) {
-      res.status(500).send({
-        message: "photo required & less then 1mb",
-        success: false,
-      });
-    }
+    console.log("=========================>", "2");
 
     if (!["Male", "Female", "Other"].includes(req.body.gender)) {
       res.status(500).send({
@@ -92,33 +86,36 @@ const userUpdate = async (req, res) => {
       });
     }
 
-    if (!photo === undefined || !photo) {
-      user.photo = req.file.filename;
+    let updateData = {
+      slug: slugify(name),
+      name: name,
+      email: email,
+      gender: gender,
+      number: number,
+    };
+
+    if (req.file !== undefined && req.file.filename !== undefined) {
+      updateData.photo = req.file.filename;
+      console.log(updateData);
+      console.log(updateData.photo);
     }
 
-    const userUpdate = await userModel.findByIdAndUpdate(
-      paramId,
-      {
-        slug: slugify(name),
-        name: name,
-        email: email,
-        gender: gender,
-        number: number,
-      },
-      {
-        new: true,
-      }
-    );
+    const reduxUpdate = await userModel.findByIdAndUpdate(paramId, updateData, {
+      new: true,
+    });
+    const reduxU = await reduxUpdate.save();
+    console.log(reduxU);
 
     res.status(200).send({
       message: "User Updated!",
       success: true,
-      userUpdate,
+      reduxU,
     });
   } catch (error) {
+    console.log(error);
     res.status(400).send({
-      message: "User Update!",
-      success: true,
+      message: "User Not Update!",
+      success: false,
       error,
     });
     console.log(error);
