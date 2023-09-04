@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.hide {
+  display: none !important;
+}
+
+.block {
+  display: block;
+}
+
+.wheel-outer-part {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 25px;
+  height: 100%;
+}
+
+.wheel-inner-part .bhdLno {
+  width: 470px;
+  height: 470px;
+  max-width: 470px;
+  max-height: 470px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  z-index: 0;
+  margin: 0 auto;
+  border-radius: 100px;
+  width: 250px;
+  border: 6px solid #3aa3ac;
+  transition: all 0.3s ease-in-out 0s;
+}
+.btn.active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out 0s;
+}
+.btn:focus,
+.btn:hover {
+  border: 6px solid #3aa3ac;
+  transition: all 0.3s ease-in-out 0s;
+}
+.btn,
+.btn > span {
+  cursor: pointer;
+}
+
+.btn-inr {
+  color: white;
+  width: 100%;
+  border-radius: 100px;
+  font-weight: 600;
+  display: block;
+  padding: 1em 2em;
+  margin: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: rgb(247, 149, 72);
+  transition: all 0.3s ease-in-out 0s;
+}
+.btn-inr:focus,
+.btn-inr:hover {
+  background: rgb(247, 149, 72);
+  padding: 1em 2em;
+  margin: 6;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.txt-a {
+  display: inline;
+}
+
+.txt-b {
+  display: none;
+}
+
+.btn:focus .btn-inr,
+.btn:hover .btn-inr {
+  background: #3aa3ac;
+  transition: all 0.3s ease-in-out 0s;
+  margin: 6;
+  padding: 1em 2em;
+}
+
+.btn:focus .txt-a,
+.btn:hover .txt-a {
+  transition: all 0.3s ease-in-out 0s;
+  display: none;
+}
+
+.btn:focus .txt-b,
+.btn:hover .txt-b {
+  transition: all 0.3s ease-in-out 0s;
+  display: inline;
+}
+
+.zeal-wheel-outer {
+  position: absolute;
+  z-index: 20;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  transition: all 0.3s ease-in-out 0s;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+img.zeal-wheel {
+  position: absolute;
+  z-index: 20;
+  transition: all 0.3s ease-in-out 0s;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+img.image-wheel {
+  position: relative;
+  width: 500px;
+  transition: all 0.3s ease-in-out 0s;
+  height: 500px;
+  transform: rotate(46deg);
+  border-radius: 100%;
+}
+
+.wheel-inner-part {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 0;
+  transition: all 0.3s ease-in-out 0s;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.box {
+  transition: all 0.3s ease-in-out 0s;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 0px;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+button.btn.btn-abs {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.ReactModal__Content {
+  border: 6px solid #3aa3ac !important;
+  border-radius: 30px !important;
+  transform: translate(-50%, -35%)  !important;
+}
+
+.outer-lottie-file {
+  position: absolute;
+  top: -50px;
+  z-index: 1;
+  left: 0;
+}
+
+.outer-lottie-file.outer-lottie-file-left {
+  position: absolute;
+  left: -160px;
+}
+
+.outer-lottie-file.outer-lottie-file-right {
+  position: absolute;
+  left: 160px;
+}
+
+.posRel {
+  position: relative;
+}
+
+.MainForm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 140px 30px;
+  position: relative;
+}
+
+button.btn.btn-abs.pos-rel {
+  position: unset; 
+  bottom: 0px; 
+  margin-top: 20px;
+  left: 0%; 
+  transform: translate(0%,0);
+}
+
+.Edit-Update-Button {
+  padding: 15px 25px;
+  border-radius: 100px;
+  cursor: pointer !important;
+  border: none;
+  background: #f79548;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.Edit-Update-Button a {
+  cursor: pointer !important;
+  color: #fff;
+  text-decoration: none;
+}
+
+.inputTag {
+  height: 60px;
+  font-size: 16px;
+  border: 2px solid #3aa3ac !important;
+  border-radius: 100px;
+  padding: 25px;
+  font-weight: 600;
+}
+
+.submitButton {
+  color: white;
+  width: 100%;
+  border-radius: 100px;
+  font-weight: 600;
+  display: block;
+  padding: 1em 2em;
+  margin: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: rgb(247, 149, 72);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.tab-wtd {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+.tab-wtd.wtd-title {
+  font-size: 26px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.Table-Field {
+  margin-top: 50px;
+}
+
+table.tab-wtd-cen {
+  text-align: left;
+}
