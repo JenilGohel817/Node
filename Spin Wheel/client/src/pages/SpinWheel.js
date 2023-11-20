@@ -147,7 +147,7 @@ function SpinWheel() {
         <div className={`wheel-outer-part ${hideWheel}`}>
           <div className="wheel-inner-part">
             <div className="zeal-wheel-outer">
-              <img className="zeal-wheel" alt="" src="../zeal-icon.svg" />
+              <img className="zeal-wheel" alt="" src="../JG.png" />
             </div>
             <img
               className="image-wheel"
